@@ -31,7 +31,7 @@ dist/
 build/
 
 # Prisma generated client
-/generated
+generated/
 
 # SQLite database file
 *.sqlite
@@ -53,4 +53,4 @@ build/
 *.tmp
 *.temp
 
-.http
+*.http
