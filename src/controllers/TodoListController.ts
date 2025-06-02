@@ -29,7 +29,7 @@ export const createTask = async (req: Request, res: Response) => {
 export const listTasks = async (req: Request, res: Response) => {
   try {
     const tasks = await prisma.todoList.findMany({
-      orderBy: [{ maded: "asc" }, { priority: "desc" }, { name: "asc" }],
+      orderBy: [{ maded: "asc" }, { priority: "asc" }, { name: "asc" }],
     });
     return res.status(200).json({ message: tasks });
   } catch (error) {
@@ -54,7 +54,7 @@ export const concludeTask = async (req: Request, res: Response) => {
     });
 
     const tasks = await prisma.todoList.findMany({
-      orderBy: [{ maded: "asc" }, { priority: "desc" }, { name: "asc" }],
+      orderBy: [{ maded: "asc" }, { priority: "asc" }, { name: "asc" }],
     });
 
     return res
@@ -87,7 +87,7 @@ export const updateTask = async (req: Request, res: Response) => {
     });
 
     const tasks = await prisma.todoList.findMany({
-      orderBy: [{ maded: "asc" }, { priority: "desc" }, { name: "asc" }],
+      orderBy: [{ maded: "asc" }, { priority: "asc" }, { name: "asc" }],
     });
 
     return res
@@ -115,7 +115,7 @@ export const deleteTask = async (req: Request, res: Response) => {
       },
     });
     const tasks = await prisma.todoList.findMany({
-      orderBy: [{ maded: "asc" }, { priority: "desc" }, { name: "asc" }],
+      orderBy: [{ maded: "asc" }, { priority: "asc" }, { name: "asc" }],
     });
 
     res.status(200).json({ message: "Tarefa deletada com sucesso", tasks });
